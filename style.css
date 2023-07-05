@@ -1,0 +1,237 @@
+/* agr kisi element ko absolute krte ho position me wo root se lega and if agr wo kisi ka child h use relative krke absolute krte ho to wo whase absolute hoga */
+
+*{
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    box-sizing: border-box;
+}
+.icons{
+    height: 4rem;
+    width: 4rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 3rem auto;
+
+}
+.tools{
+    border: 2px solid black;
+    border-radius: 20px;
+    width: fit-content;
+    gap: 60px;
+    background-color: #caf0f8;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.tools > div:hover{
+    transition:300ms;
+    scale:1.1;
+}
+
+.tools > div:nth-child(1)::after{
+   content: "Pencil";
+   position: absolute;
+   top: 120px;
+   pointer-events: none;
+   
+}
+.tools > div:nth-child(2)::after{
+    content: "Eraser";
+    position: absolute;
+    top: 120px;
+    
+ }
+ .tools > div:nth-child(3)::after{
+    content: "Notes";
+    position: absolute;
+    top: 145px;
+    
+ }
+ .tools > div:nth-child(4)::after{
+    content: "Upload";
+    position: absolute;
+    top: 145px;
+   
+    
+ }
+ .tools > div:nth-child(5)::after{
+    content: "Download";
+    position: absolute;
+    top: 145px;
+    
+ }
+ .tools > div:nth-child(6)::after{
+    content: "Undo";
+    position: absolute;
+    top: 145px;
+    
+ }
+ .tools > div:nth-child(7)::after{
+    content: "Redo";
+    position: absolute;
+    top: 145px;
+ }
+     
+ 
+
+
+
+
+
+.pencil{
+
+    margin-left: 20px;
+}
+
+.redo{
+
+    margin-right: 20px;
+}
+
+
+
+.active{
+    padding: 1rem;
+    border-radius: 3.5rem;
+    background-color: grey;
+}
+
+.blue,.red,.black{
+    width: 2.2rem;
+    height: 98%;
+    border-radius: 100%;
+}
+
+.min{
+background-color: #76ff76;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.black{
+    background-color: black;
+}
+
+.red,.close{
+    background-color: red;
+}
+
+.pencil-options{
+    height: 5rem;
+    width: 10rem;
+    background-color: chocolate;
+    display:none;
+}
+
+.pencil-slider,.pencil-colors{
+    height: 50%;
+    width: 10rem;
+}
+
+.pencil-colors{
+    padding: 0.1rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-color:darksalmon;
+}
+
+.pencil-slider{
+    background-color:aliceblue;
+}
+
+
+
+.eraser-options{
+    height:2.5rem;
+    width: 10rem;
+    background-color: chocolate;
+    display: none;
+}
+
+.eraser-slider{
+    height: 100%;
+    width: 100%;
+    background-color: blanchedalmond;
+
+
+}
+
+
+
+
+
+ .pencil,.eraser{
+    position: relative;
+}
+
+.pencil-options,.eraser-options{
+    position: absolute;
+    top: 104%;
+    left: 0rem;
+} 
+
+.sticky2{
+    height: 15rem;
+    width: 16rem;
+    position: absolute;
+    left: 35rem;
+    top: 15rem;
+}
+.top{
+    width: 100%;
+    height: 2.2rem;
+    padding: .5rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #a3b18a;
+    /* rem me doge to mst curve aiga percent me doge to ni aiga */
+}
+
+.bottom{
+    width: 100%;
+    height: 18rem;
+    background-color: #ffd60a;
+}
+
+.min,.close{
+    
+    width: 1.5rem;
+    height: 122%;
+    border-radius: 100%;
+    margin-left: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;  
+}
+
+
+
+.chooseFile{
+    display: none;
+    position:absolute;
+    height: 2rem;
+    width: 12rem;
+    background-color: red;
+}
+
+
+.show{
+    display: block;
+}
+
+.imgStyle{
+    height: 14rem;
+    width: 16rem;
+}
+
+
+.alignSlider{
+    text-align: center;
+    padding-top: 0.8rem;
+}
